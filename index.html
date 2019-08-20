@@ -5,31 +5,51 @@
     <title>Waitstaff Calculator</title>
     <link rel="stylesheet" href="styles/index.css">
 </head>
+
 <body>
-    <header>
+    <header id="header">
         <h1>Waitstaff Calculator</h1>
     </header>
-    <main>
-        <h2>Enter the Meal Details</h2>
-        <form name="mealDetails" id="mealDetailsForm" autocomplete="off">
-            <label for="BaseMealPrice">Base Meal Price: $</label>
-            <input type="number" step="0.01" min="0.00" value="0.00" name="BaseMealPrice"><br/>
-            <label for="TaxRate">Tax Rate: %</label>
-            <input step="0.01" min="0.00" value="8.31" type="number" name="TaxRate"><br/>
-            <label for="TipPercentage">Tip Percentage: %</label>
-            <input step="0.01" min="0.00" value="8.31" type="number" name="TipPercentage"><br/>
-            <button type="submit">Submit</button>
-            <button type="reset">Reset</button>
-        </form>
-    </main>
-    <section>
+    <div class="flexContainerMain">
+        <main id="mealDetails">
+            <h2>Enter the Meal Details</h2>
+            <form name="mealDetails" id="mealDetailsForm" autocomplete="off">
+                <div class="inputFlexRow">
+                    <label for="BaseMealPrice">Base Meal Price: $</label>
+                    <input type="number" step="0.01" min="0.00" value="0.00" name="BaseMealPrice" id="inputForBaseMealPrice">
+                </div>
+                <div class="inputFlexRow tiny">
+                    <label for="TaxRate">Tax Rate: %</label>
+                    <input step="0.01" min="0.00" value="8.31" type="number" name="TaxRate" id="inputForTaxRate">
+                </div>
+                <div class="inputFlexRow tiny">
+                    <label for="TipPercentage">Tip Percentage: %</label>
+                    <input step="0.01" min="0.00" value="15.00" type="number" name="TipPercentage" id="inputForTipPercentage"><br />
+                </div>
+                <div class="inputFlexRow" id="formButtons">
+                    <button type="button" id="submitButton">Submit</button>
+                    <button type="reset" id="cancelButton">Cancel</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    <div class="flexContainerSub">
+        <section id="customerCharges">
+            <h2>Customer Charges</h2>
+            <h3>Subtotal 0.00</h3>
+            <h3>Tip 0.00</h3>
+            <h3>Total 0.00</h3>
+        </section>
+        <section id="myEarnings">
+            <h2>My Earnings Info</h2>
+            <h3>Tip Total: 0.00</h3>
+            <h3 id="mealCount">Meal Count: 0</h3><span>
+            <h3>Average Tip Per Meal: 0.00</h3>
+        </section>
 
-    </section>
-    <section>
-
-    </section>
-    <section>
-
+    </div>
+    <section id="resetButton">
+        <button type="button">Reset</button>
     </section>
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script type="text/javascript" src="/scripts/index.js"></script>

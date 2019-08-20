@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+header {
+    width: 100%;
+    order: 0;
+}
+
+.flexContainerMain {
+    order: 1;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    height: 55vw;
+}
+
+#customerCharges, #myEarnings {
+    height: 25vw;
+}
+
+#customerCharges {
+    border: 1px solid black;
+    margin-top: 1vw;
+    margin-bottom: auto;
+}
+
+#myEarnings {
+    border: 1px solid black;
+    margin-top: 3vw;
+    margin-bottom: auto;
+}
+
+.flexContainerSub {
+    order: 2;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#resetButton {
+    order: 3;
+    width: 100%;
+}
+
+#resetButton > button {
+    float: right;
+    margin-right: 4.8%;
+    margin-top: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+}
+
+h2 {
+    border-bottom: 2px solid black;
+    padding-bottom: 1vw;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+h3 {
+    margin-top: auto;
+    font-size: 24px;
+    margin-right: 20%;
+    text-align: right;
+}
+
+#mealCount {
+    position: relative;
+    left: -7.5%;
+}
+
+label {
+    text-align: right;
+    width: 50%;
+    font-size: 24px;
+}
+
+.inputFlexRow {
+    display: flex;
+    margin-bottom: 3vw;
+}
+
+input {
+    margin-left: 10px;
+    margin-right: auto;
+    font-size: 16px;
+    width: 15vw;
+}
+
+.tiny > input {
+    width: 5vw;
+}
+
+#formButtons {
+    margin-bottom: 10px;
+    margin-top: 25vw;
+}
+
+#submitButton {
+    margin-left: auto;
+    margin-right: 25px;
+}
+
+#cancelButton {
+    margin-right: 25px;
+}
+
+button {
+    font-size: 20px;
+}
+
+button:hover {
+    cursor: pointer;
+}
