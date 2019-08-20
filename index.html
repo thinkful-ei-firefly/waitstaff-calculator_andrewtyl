@@ -10,7 +10,17 @@
         <h1>Waitstaff Calculator</h1>
     </header>
     <main>
-
+        <h2>Enter the Meal Details</h2>
+        <form name="mealDetails" id="mealDetailsForm" autocomplete="off">
+            <label for="BaseMealPrice">Base Meal Price: $</label>
+            <input type="number" step="0.01" min="0.00" value="0.00" name="BaseMealPrice"><br/>
+            <label for="TaxRate">Tax Rate: %</label>
+            <input step="0.01" min="0.00" value="8.31" type="number" name="TaxRate"><br/>
+            <label for="TipPercentage">Tip Percentage: %</label>
+            <input step="0.01" min="0.00" value="8.31" type="number" name="TipPercentage"><br/>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
     </main>
     <section>
 
