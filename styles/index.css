@@ -2,6 +2,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    max-width: 1000px;
 }
 
 header {
@@ -95,7 +96,7 @@ input {
 }
 
 .tiny > input {
-    width: 5vw;
+    width: 6vw;
 }
 
 #formButtons {

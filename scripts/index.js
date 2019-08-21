@@ -35,25 +35,6 @@ function processStore(baseMealPrice, taxRate, tipPercentage) {
 }
 
 function reRenderPage() {
-    $('main').html(`<h2>Enter the Meal Details</h2>
-            <form name="mealDetails" id="mealDetailsForm" autocomplete="off">
-            <div class="inputFlexRow">
-            <label for="BaseMealPrice">Base Meal Price: $</label>
-            <input type="number" step="0.01" min="0.00" value="0.00" name="BaseMealPrice" id="inputForBaseMealPrice">
-            </div>
-            <div class="inputFlexRow tiny">
-            <label for="TaxRate">Tax Rate: %</label>
-            <input step="0.01" min="0.00" value="8.31" type="number" name="TaxRate" id="inputForTaxRate">
-            </div>
-            <div class="inputFlexRow tiny">
-            <label for="TipPercentage">Tip Percentage: %</label>
-            <input step="0.01" min="0.00" value="15.00" type="number" name="TipPercentage" id="inputForTipPercentage"><br />
-            </div>
-            <div class="inputFlexRow" id="formButtons">
-            <button type="button" id="submitButton">Submit</button>
-            <button type="reset" id="cancelButton">Cancel</button>
-            </div>
-        </form>`);
     $('#customerCharges').html(`
             <h2>Customer Charges</h2>
             <h3>Subtotal ${STORE.lastOrder.subtotal}</h3>
@@ -65,5 +46,6 @@ function reRenderPage() {
             <h3>Tip Total: ${STORE.earnings.tipTotal}</h3>
             <h3 id="mealCount">Meal Count: ${STORE.earnings.mealCount}</h3><span>
             <h3>Average Tip Per Meal: ${STORE.earnings.avgTip}</h3>
-    `)
+    `);
+    $('#mealDetailsForm')[0].reset();
 }
